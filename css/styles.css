@@ -20,25 +20,30 @@
   --accent-btn-background-color: #2196f3;
   --secondary-accent-btn-background-color: #188ce8;
 }
-
-body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  letter-spacing: 0.03em;
-  background-color: var(--main-background-color);
-  color: var(--main-text-color);
-}
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-p,
+p {
+  margin: 0;
+}
+
 ul {
   margin: 0;
   padding: 0;
 }
+img {
+  display: block;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  background-color: var(--main-background-color);
+  color: var(--main-text-color);
+}
+
 .link {
   text-decoration: none;
 }
@@ -51,6 +56,10 @@ ul {
   padding: 0 15px;
   outline: 2px solid tomato;
 }
+.centered {
+  text-align: center;
+}
+
 /* -----------hiden title------------- */
 .hiden-title {
   position: absolute;
@@ -69,13 +78,19 @@ ul {
 .accent-link:focus {
   color: var(--accent-text-color);
 }
-
+.btn {
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
 /* -------------------logo------------------ */
 .logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: calc(31 / 26);
+  letter-spacing: 0.03em;
   color: var(--main-logo-color);
 }
 .header-logo-accent {
@@ -104,30 +119,32 @@ ul {
 }
 /* ----------------main------------------ */
 /* -----------hero------------ */
+.hero.section {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
 .hero {
   background-color: var(--secondary-background-color);
 }
 .hero-title {
+  margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--secondary-text-color);
 }
 .hero-btn {
-  font-family: inherit;
+  min-width: 200px;
+  padding: 10px 32px;
   font-weight: 700;
-  font-size: 16px;
   line-height: 1.87;
-  display: flex;
-  align-items: center;
-  text-align: center;
+  /* display: flex;
+  align-items: center; */
   letter-spacing: 0.06em;
   color: var(--accent-btn-color);
   background-color: var(--accent-btn-background-color);
-  cursor: pointer;
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -138,18 +155,20 @@ ul {
 .advantage-title {
   font-size: 14px;
   line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 .advantage-text {
   font-size: 14px;
   line-height: 1.71;
+  letter-spacing: 0.03em;
   color: var(--first-text-color);
 }
 /* -----------our jobs and team section---------- */
 .section-title {
   font-size: 36px;
   line-height: calc(42 / 36);
-  text-align: center;
+  letter-spacing: 0.03em;
 }
 /* --------------team-------------------  */
 .team.section {
@@ -160,9 +179,10 @@ ul {
 }
 .specialist {
   line-height: calc(19 / 16);
-  text-align: center;
+  letter-spacing: 0.03em;
 }
 .team-name {
+  font-size: inherit;
   font-weight: 500;
 }
 .team-position {
@@ -171,15 +191,13 @@ ul {
 /*----------------- PORTFOLIO----------------- */
 /* --------------------btn------------------- */
 .our-works-btn {
-  font-family: inherit;
+  padding: 6px 22px;
+  min-width: 73px;
   font-weight: 500;
-  font-size: 16px;
   line-height: 1.62;
-  text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-btn-color);
   background-color: var(--main-btn-background-color);
-  cursor: pointer;
 }
 .our-works-btn:hover,
 .our-works-btn:focus,
@@ -195,6 +213,7 @@ ul {
 }
 .our-works-text {
   line-height: 1.87;
+  letter-spacing: 0.03em;
   color: var(--first-text-color);
 }
 /* ---------------footer----------------- */
