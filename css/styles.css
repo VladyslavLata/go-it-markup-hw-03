@@ -54,7 +54,10 @@ body {
   width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
-  outline: 2px solid tomato;
+  /* outline: 2px solid tomato; */
+}
+.section {
+  padding: 94px 0;
 }
 .centered {
   text-align: center;
@@ -86,6 +89,7 @@ body {
 }
 /* -------------------logo------------------ */
 .logo {
+  display: inline-block;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -101,15 +105,44 @@ body {
 }
 
 /* ----------------header------------------ */
-.header-list,
-.header-contacts-list {
+
+.header {
+  border-bottom: 1px solid #ececec;
+}
+.header .link {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.header .list {
   font-weight: 500;
   font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
 }
+.header-list {
+  display: flex;
+  align-items: center;
+  margin-left: 93px;
+}
+.header .item:not(:last-child) {
+  margin-right: 50px;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+}
 .header-link {
   color: currentColor;
+}
+
+.header-contacts-list {
+  display: flex;
+  margin-left: auto;
+}
+.header-container {
+  display: flex;
+  align-items: center;
 }
 .header-contacts-link {
   color: var(--first-text-color);
@@ -122,10 +155,9 @@ body {
 .hero.section {
   padding-top: 200px;
   padding-bottom: 200px;
-}
-.hero {
   background-color: var(--secondary-background-color);
 }
+
 .hero-title {
   margin-bottom: 30px;
   font-weight: 900;
@@ -140,11 +172,10 @@ body {
   padding: 10px 32px;
   font-weight: 700;
   line-height: 1.87;
-  /* display: flex;
-  align-items: center; */
   letter-spacing: 0.06em;
   color: var(--accent-btn-color);
   background-color: var(--accent-btn-background-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -163,6 +194,9 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--first-text-color);
+}
+.advantage.section {
+  padding-bottom: 0;
 }
 /* -----------our jobs and team section---------- */
 .section-title {
@@ -218,7 +252,11 @@ body {
 }
 /* ---------------footer----------------- */
 .footer {
+  padding: 60px 0;
   background-color: var(--secondary-background-color);
+}
+.footer-logo {
+  margin-bottom: 20px;
 }
 .footer-address {
   font-style: normal;
@@ -232,5 +270,9 @@ body {
   color: var(--contaks-footer-color);
 }
 .footer-text {
+  margin-bottom: 9px;
   color: var(--secondary-text-color);
+}
+.footer-item:first-child {
+  margin-bottom: 9px;
 }
