@@ -108,10 +108,15 @@ body {
 .header {
   border-bottom: 1px solid #ececec;
 }
-.header .link {
-  display: block;
+.header-logo {
   padding-top: 24px;
   padding-bottom: 24px;
+}
+.header-link,
+.header-contacts-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .header .list {
   font-weight: 500;
@@ -190,7 +195,7 @@ body {
   display: flex;
 }
 .advantage-item {
-  width: calc((100% - 90px) / 4);
+  width: calc((100% - 3 * 30px) / 4);
 }
 .advantage-item:not(:last-child) {
   margin-right: 30px;
@@ -208,12 +213,16 @@ body {
   letter-spacing: 0.03em;
   color: var(--first-text-color);
 }
-.advantage.section {
-  padding-bottom: 0;
-}
+
 /* -----------our jobs and team section---------- */
+.our-jobs.section {
+  padding-top: 0;
+}
 .our-jobs-list {
   display: flex;
+}
+.our-jobs-item {
+  width: calc((100% - 2 * 30px) / 3);
 }
 .our-jobs-item:not(:last-child) {
   margin-right: 30px;
@@ -225,6 +234,10 @@ body {
   letter-spacing: 0.03em;
   margin-bottom: 50px;
 }
+.our-jobs-img {
+  max-width: 100%;
+  height: auto;
+}
 
 /* --------------team-------------------  */
 .team.section {
@@ -234,6 +247,7 @@ body {
   display: flex;
 }
 .team-item {
+  width: calc((100% - 3 * 30px) / 4);
   background-color: var(--main-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -242,12 +256,16 @@ body {
 .team-item:not(:last-child) {
   margin-right: 30px;
 }
+.team-img {
+  max-width: 100%;
+  height: auto;
+}
 .specialist {
   line-height: calc(19 / 16);
   letter-spacing: 0.03em;
 }
 .footer-team-item {
-  padding: 30px 10px;
+  padding: 30px 32px;
 }
 .team-name {
   margin-bottom: 10px;
@@ -294,12 +312,15 @@ body {
 .our-works-list {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -30px;
-  margin-bottom: -30px;
+  margin: -15px;
 }
 .our-works-item {
-  margin-left: 30px;
-  margin-bottom: 30px;
+  width: calc((100% - 3 * 30px) / 3);
+  margin: 15px;
+}
+.our-works-img {
+  max-width: 100%;
+  height: auto;
 }
 .footer-our-works-item {
   padding: 20px 24px;
